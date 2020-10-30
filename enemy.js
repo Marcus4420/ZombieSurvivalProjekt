@@ -27,4 +27,10 @@ class Enemy {
     fill(255,0,0);
     ellipse(this.x, this.y, this.w, this.h);
     }
+
+    skudt() {
+        if (this.x - skud.x && this.y - skud.y > 0) {
+            console.log("Ramt")
+        }
+    }
 }

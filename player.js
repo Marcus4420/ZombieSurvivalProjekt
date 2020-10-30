@@ -8,19 +8,19 @@ class Player {
   
     move() {
         if (keyIsDown(LEFT_ARROW)) {
-            this.x -= 5
+            this.x -= 4
           }
         
           if (keyIsDown(RIGHT_ARROW)) {
-            this.x += 5;
+            this.x += 4;
           }
         
           if (keyIsDown(UP_ARROW)) {
-            this.y -= 5;
+            this.y -= 4;
           }
         
           if (keyIsDown(DOWN_ARROW)) {
-            this.y += 5;
+            this.y += 4;
           }
       }
   
@@ -30,4 +30,9 @@ class Player {
     fill(139,69,19);
     rect(this.x, this.y, this.w, this.h);
     }
+
+
+    shoot() {
+      console.log("pew pew")
+  } 
 }
