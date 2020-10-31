@@ -28,7 +28,7 @@ class Player {
     stroke(0);
     strokeWeight(2);
     fill(139,69,19);
-    rect(this.x, this.y, this.w, this.h);
+    ellipse(this.x, this.y, this.w, this.h);
     }
 
 

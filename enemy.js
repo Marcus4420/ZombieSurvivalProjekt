@@ -1,9 +1,8 @@
 class Enemy {
-    constructor(x, y, w, h) {
+    constructor(x, y, r) {
       this.x = x;
       this.y = y;
-      this.w = w;
-      this.h = h;
+      this.r = r
     }
   
     attack() {
@@ -25,12 +24,17 @@ class Enemy {
     stroke(0);
     strokeWeight(2);
     fill(255,0,0);
-    ellipse(this.x, this.y, this.w, this.h);
+    ellipse(this.x, this.y, this.r);
     }
-
-    skudt() {
-        if (this.x - skud.x && this.y - skud.y > 0) {
-            console.log("Ramt")
-        }
-    }
+    myX(){
+		return this.x;
+	}
+	
+	myY(){
+		return this.y;
+	}
+	
+	myR(){
+		return this.r;
+	}
 }
