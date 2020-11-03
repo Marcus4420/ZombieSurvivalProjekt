@@ -33,6 +33,5 @@ class Player {
 
 
     shoot() {
-      console.log("pew pew")
-  } 
+  }
 }

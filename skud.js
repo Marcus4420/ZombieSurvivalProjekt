@@ -30,6 +30,7 @@ class Skud{
 			var collideOrNot = collideCircleCircle(this.x, this.y, 30, enemies[i].myX(), enemies[i].myY(), enemies[i].myR())
 			if (collideOrNot){
 				enemies.splice(i,1);
+				score++
                 return true;
 			}
 		}

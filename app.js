@@ -1,8 +1,9 @@
 let player;
 let enemies = [];
 let SkudSkudt = [];
-let balloonSpawnMultiplier = 2;
+let balloonSpawnMultiplier = 3;
 let targetTimer = 0;
+let score = 0;
 
 function setup() {
     createCanvas(600,600);
@@ -12,6 +13,7 @@ function setup() {
 
 function draw() {
     background(245,245,220);
+    scoreboard();
     
     for (let Enemy of enemies) {
     Enemy.show();
@@ -32,13 +34,14 @@ function draw() {
       }
     }
 
-    if (enemies.length < 5) {
+    targetTimer += 1
     let spawnInterval = int(100 / balloonSpawnMultiplier);
     if (targetTimer % spawnInterval == 0){
     let enemy = new Enemy(random(width), random(height), 10);
     enemies.push(enemy)
-    }
-    
+    console.log("Enemy spawned")
+    console.log("Current enemies: " + enemies.length)
+
 }
 
 }
