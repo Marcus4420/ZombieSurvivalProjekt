@@ -8,8 +8,8 @@ class Skud{
 	
 	show(){
 		push()
-		stroke(230, 255, 0);
-		fill(230, 255, 0, 135);
+		stroke(43, 39, 39);
+		fill(43, 39, 39, 135);
 		ellipse(this.x, this.y, 10);
 		pop();
 	}

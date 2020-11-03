@@ -1,14 +1,15 @@
 let player;
 let enemies = [];
 let SkudSkudt = [];
-let balloonSpawnMultiplier = 3;
 let targetTimer = 0;
 let score = 0;
+let skud_effekt;
 
 function setup() {
     createCanvas(600,600);
     //Creates the player class
-    player = new Player(width/2, height/2, 20, 20);
+    player = new Player(width/2, height/2, 30);
+    skud_effekt = loadSound('Sounds/skudlyd.mp3');
 }
 
 function draw() {
@@ -22,6 +23,7 @@ function draw() {
 
     player.show();
     player.move();
+    player.DeathCheck();
 
     for (i = 0; i < SkudSkudt.length; i++) {
         SkudSkudt[i].show();
@@ -34,10 +36,10 @@ function draw() {
       }
     }
 
-    targetTimer += 1
-    let spawnInterval = int(100 / balloonSpawnMultiplier);
-    if (targetTimer % spawnInterval == 0){
-    let enemy = new Enemy(random(width), random(height), 10);
+    targetTimer += 1 * (score + 1);;
+    if (targetTimer > 500){
+    targetTimer = 0;
+    let enemy = new Enemy(random(width), random(height), 18);
     enemies.push(enemy)
     console.log("Enemy spawned")
     console.log("Current enemies: " + enemies.length)
