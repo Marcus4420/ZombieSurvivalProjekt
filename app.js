@@ -4,6 +4,11 @@ let SkudSkudt = [];
 let targetTimer = 0;
 let score = 0;
 let skud_effekt;
+let background_image
+
+function preload() {
+    background_image = loadImage('Images/Background/baggrund_sprite.png')
+}
 
 function setup() {
     createCanvas(600,600);
@@ -13,7 +18,7 @@ function setup() {
 }
 
 function draw() {
-    background(245,245,220);
+    background(background_image);
     scoreboard();
     
     for (let Enemy of enemies) {

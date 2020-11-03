@@ -9,7 +9,7 @@ class Skud{
 	show(){
 		push()
 		stroke(43, 39, 39);
-		fill(43, 39, 39, 135);
+		fill(255, 255, 255, 135);
 		ellipse(this.x, this.y, 10);
 		pop();
 	}

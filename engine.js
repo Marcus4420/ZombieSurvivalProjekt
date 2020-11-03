@@ -8,9 +8,9 @@ function getMouseVector(){
 
 
 function scoreboard() {
-	noStroke();
+	stroke(0)
 	textSize(16);
-	fill(0)
+	fill(255)
 	text("Current score: " + score, 10, 30);
 	text("Current enemies: " + enemies.length, 10, 50);
 
