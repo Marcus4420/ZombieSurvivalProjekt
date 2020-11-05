@@ -11,7 +11,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(600,600);
+    createCanvas(800,800);
     //Creates the player class
     player = new Player(width/2, height/2, 30);
     skud_effekt = loadSound('Sounds/skudlyd.mp3');
