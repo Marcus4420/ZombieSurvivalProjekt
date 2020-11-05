@@ -7,13 +7,13 @@
 Gmail-workspace is a webapp made with Javascript and Google developers Gmail API :+1
 
 ## Source materials
-1. [Google Developers API](https://developers.google.com/apis-explorer).
-    - [Gmail API](https://developers.google.com/gmail/api/reference/rest).
+1. [Coming soon](Google.com).
+    - [Coming soon](Google.com).
 
 
 
 ## Usage
-This program is made as a Gmail workspace, made for people that get lots of mails to help get an overview... *To be continued..*
+ Coming soon...
 
 
 ### Task list
@@ -26,7 +26,7 @@ This program is made as a Gmail workspace, made for people that get lots of mail
 - [ ] API
     - [ ]
 - [ ] ETC.
-    - [ ] Local storage for selected Gmail.
+    - [ ] 
 
 
 ## Contributing
