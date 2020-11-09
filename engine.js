@@ -15,3 +15,21 @@ function scoreboard() {
 	text("Current enemies: " + enemies.length, 10, 50);
 
 }
+
+function spawning() {
+targetTimer += 1 * (score + 1);;
+if (targetTimer > 500){
+targetTimer = 0;
+let enemy = new Enemy(random(width), random(height), 18);
+enemies.push(enemy)
+console.log("Enemy spawned")
+console.log("Current enemies: " + enemies.length)
+let BigSpawn = Math.floor(Math.random() * 2)
+console.log(BigSpawn)
+if (BigSpawn === 1) {
+	let BigTank = new TankEnemyBig(random(width), random(height), 26);
+	enemies.push(BigTank);
+}
+
+}
+}

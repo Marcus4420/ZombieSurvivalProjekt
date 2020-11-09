@@ -6,9 +6,6 @@ let score = 0;
 let skud_effekt;
 let background_image
 
-function preload() {
-    background_image = loadImage('Images/Background/baggrund_sprite.png')
-}
 
 function setup() {
     createCanvas(800,800);
@@ -18,8 +15,9 @@ function setup() {
 }
 
 function draw() {
-    background(background_image);
+    background(155,118,83);
     scoreboard();
+    spawning();
     
     for (let Enemy of enemies) {
     Enemy.show();
@@ -40,16 +38,6 @@ function draw() {
             SkudSkudt.splice(Skud,1);
       }
     }
-
-    targetTimer += 1 * (score + 1);;
-    if (targetTimer > 500){
-    targetTimer = 0;
-    let enemy = new Enemy(random(width), random(height), 18);
-    enemies.push(enemy)
-    console.log("Enemy spawned")
-    console.log("Current enemies: " + enemies.length)
-
-}
 
 }
 

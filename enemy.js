@@ -3,7 +3,13 @@ class Enemy {
       this.x = x;
       this.y = y;
       this.r = r
+      this.tank = false;
     }
+
+
+    isTank() {
+      return false;
+  }
   
     attack() {
         if (player.x > this.x) {
@@ -36,5 +42,5 @@ class Enemy {
 	
 	myR(){
 		return this.r;
-	}
+  }
 }

@@ -29,9 +29,14 @@ class Skud{
 		for (var i = 0; i < enemies.length; i++){
 			var collideOrNot = collideCircleCircle(this.x, this.y, 30, enemies[i].myX(), enemies[i].myY(), enemies[i].myR())
 			if (collideOrNot){
+				if (enemies[i].isTank()){
+					let SmallTank = new TankEnemySmall(enemies[i].x + 15, enemies[i].y + 15, 13);
+					for (var j = 0; j < 2; j++)
+					enemies.push(SmallTank);
+				}
 				enemies.splice(i,1);
 				score++
-                return true;
+				return true
 			}
 		}
 		return false;
