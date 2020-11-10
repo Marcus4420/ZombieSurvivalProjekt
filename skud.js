@@ -4,6 +4,8 @@ class Skud{
 		this.y = player.y;
 		this.xSpd = 12*xSpd;
 		this.ySpd = 12*ySpd;
+		this.randX = Math.floor(Math.random(150))
+		this.randY = Math.floor(Math.random(150))
 	}
 	
 	show(){
@@ -30,9 +32,13 @@ class Skud{
 			var collideOrNot = collideCircleCircle(this.x, this.y, 30, enemies[i].myX(), enemies[i].myY(), enemies[i].myR())
 			if (collideOrNot){
 				if (enemies[i].isTank()){
-					let SmallTank = new TankEnemySmall(enemies[i].x + 15, enemies[i].y + 15, 13);
-					for (var j = 0; j < 2; j++)
+					let SmallTank = new TankEnemySmall(enemies[i].x + Math.floor(Math.random(150)), enemies[i].y + Math.floor(Math.random(150)), 13);
+					for (var j = 0; j < 2; j++) {
+					console.log(j)
 					enemies.push(SmallTank);
+					this.randX = Math.floor(Math.random(150))
+					this.randY = Math.floor(Math.random(150))
+					}
 				}
 				enemies.splice(i,1);
 				score++
