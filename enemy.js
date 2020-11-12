@@ -10,8 +10,8 @@ class Enemy {
     isTank() {
       return false;
   }
-  
-    attack() {
+
+  attack() {
         if (player.x > this.x) {
             this.x++
         }
