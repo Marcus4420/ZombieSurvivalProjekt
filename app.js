@@ -1,4 +1,4 @@
-let player;
+/* */
 let enemies = [];
 let SkudSkudt = [];
 let targetTimer = 0;
