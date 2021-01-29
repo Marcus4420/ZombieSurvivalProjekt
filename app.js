@@ -15,6 +15,10 @@ let musik
 /* Baggrundsbillede load in*/
 let background_image;
 let playerimg;
+let playing = 0;
+let acc = 0;
+let shotshit = 0;
+let totalshots = 0;
 
 
 function preload() {
@@ -30,13 +34,15 @@ function setup() {
     player = new Player(width/2, height/2, 30);
     /* Pådutter en lyd til variablen skud_effekt. Lyden kan findes i ./Sounds */
     skud_effekt = createAudio('Sounds/skudlyd.mp3')
-    musikken();
 }
 
 /* Det uendelige loop der holder spillet igang*/
 function draw() {
     /* Midlertidig baggrundsfarve. Erstat RGB med background_image når et ordentligt er valgt*/
     background(155,118,83);
+    if (totalshots < 1) {
+      spawnmessage();
+    }
     /* Scoreboard funktionen med score + aktive fjender. Se engine.js*/
     scoreboard();
     /* Enemy spawning function. Se ligeledes engine.js*/
@@ -72,6 +78,7 @@ function draw() {
 
 
 function mousePressed() {
+    musikken();
     /* Får retningen for skuddet */
     let mouseVector = getMouseVector();
     /* Spillerens shoot function */    

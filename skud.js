@@ -24,7 +24,7 @@ class Skud{
 	}
 	
 	outOfBounds(){
-        return(this.x > width+10 || this.x < -10 || this.y > height+10 || this.y < -10);
+		return(this.x > width+10 || this.x < -10 || this.y > height+10 || this.y < -10);
     }
 
     hitScan(){
@@ -42,10 +42,14 @@ class Skud{
 				}
 				enemies.splice(i,1);
 				score++
+				shotshit++
+				acc = (shotshit/totalshots) * 100
 				return true
 			}
 		}
 		return false;
+		shotsmissed++
+		acc = (shotshit/totalshots) * 100
 	}
 }
 

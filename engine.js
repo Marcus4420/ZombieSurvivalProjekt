@@ -11,14 +11,21 @@ function musikken () {
 	musik.play();
 }
 
-
 function scoreboard() {
+	scorefixed = score * (acc/100)
 	stroke(0)
 	textSize(16);
 	fill(255)
-	text("Current score: " + score, 10, 30);
-	text("Current enemies: " + enemies.length, 10, 50);
+	text("Current score: " + scorefixed.toFixed(2), 10, 30);
+	text("Current accurary: " + round(acc) + "%", 10, 50);
+	text("Current enemies: " + enemies.length, 10, 70);
 
+}
+
+
+function spawnmessage() {
+	fill(255);
+	text("BRUG PILETASTERNE TIL AT BEVÆGE DIG \n SKYD NÅR DU SER EN FJENDE", width/2 + player.r, height/2);
 }
 
 function spawning() {

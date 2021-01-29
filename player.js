@@ -32,6 +32,7 @@ class Player {
 
 
     shoot() {
+      totalshots++
       skud_effekt.volume(0.02);
       skud_effekt.play();
     }
@@ -45,6 +46,10 @@ class Player {
         this.y = height/2
         console.log("Din score blev: " + score);
         score = 0;
+        acc = 0;
+        musik.stop();
+        totalshots = 0;
+        shotshit = 0;
         enemies.length = 0;
         return true;
 			}
