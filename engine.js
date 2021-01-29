@@ -6,6 +6,11 @@ function getMouseVector(){
 	return mouseDir;
 }
 
+function musikken () {
+	musik.volume(0.010);
+	musik.play();
+}
+
 
 function scoreboard() {
 	stroke(0)

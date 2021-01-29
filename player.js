@@ -32,9 +32,8 @@ class Player {
 
 
     shoot() {
-      /*
+      skud_effekt.volume(0.02);
       skud_effekt.play();
-  */
     }
 
 

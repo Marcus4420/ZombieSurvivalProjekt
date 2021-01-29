@@ -19,7 +19,7 @@ let playerimg;
 
 function preload() {
     playerimg = loadImage('Cowboy_Player.png');
-    musik = loadSound('Baptism.mp3');
+    musik = createAudio('Baptism.mp3');
   }
 
 /* Start-up script*/
@@ -29,8 +29,8 @@ function setup() {
     /* Her skaber vi vores spiller ud fra class Player (se player.js) ud fra en x-pos, y-pos og radius. x & y pos er sat til altid at være center, for at gøre det scalable i størrelse */
     player = new Player(width/2, height/2, 30);
     /* Pådutter en lyd til variablen skud_effekt. Lyden kan findes i ./Sounds */
-    skud_effekt = loadSound('Sounds/skudlyd.mp3');
-    musik.play();
+    skud_effekt = createAudio('Sounds/skudlyd.mp3')
+    musikken();
 }
 
 /* Det uendelige loop der holder spillet igang*/
