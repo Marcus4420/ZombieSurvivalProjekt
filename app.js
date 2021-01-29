@@ -10,9 +10,16 @@ let targetTimer = 0;
 let score = 0;
 /* Sound effekt for skudene*/
 let skud_effekt;
+/*Baggrundsmusik*/
+let baggrundsmusik
 /* Baggrundsbillede load in*/
-let background_image
+let background_image;
+let playerimg;
 
+
+function preload() {
+    playerimg = loadImage('Images\Sprites\Cowboy_Player.png');
+  }
 
 /* Start-up script*/
 function setup() {
@@ -22,6 +29,8 @@ function setup() {
     player = new Player(width/2, height/2, 30);
     /* Pådutter en lyd til variablen skud_effekt. Lyden kan findes i ./Sounds */
     skud_effekt = loadSound('Sounds/skudlyd.mp3');
+    baggrundsmusik = loadSound('Sounds\Baptism.mp3')
+    baggrundsmusik.play();
 }
 
 /* Det uendelige loop der holder spillet igang*/
