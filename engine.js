@@ -12,11 +12,10 @@ function musikken () {
 }
 
 function scoreboard() {
-	scorefixed = score * (acc/100)
 	stroke(0)
 	textSize(16);
 	fill(255)
-	text("Current score: " + scorefixed.toFixed(2), 10, 30);
+	text("Current score: " + score, 10, 30);
 	text("Current accurary: " + round(acc) + "%", 10, 50);
 	text("Current enemies: " + enemies.length, 10, 70);
 
@@ -39,7 +38,7 @@ console.log("Current enemies: " + enemies.length)
 let BigSpawn = Math.floor(Math.random() * 2)
 console.log(BigSpawn)
 if (BigSpawn === 1) {
-	let BigTank = new TankEnemyBig(random(width), random(height), 26);
+	let BigTank = new TankEnemyBig(random(width), random(height), 39);
 	enemies.push(BigTank);
 }
 

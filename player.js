@@ -7,6 +7,7 @@ class Player {
   
     move() {
         if (keyIsDown(LEFT_ARROW)) {
+            playerimg.rotate(270);
             this.x -= 4
           }
         
@@ -24,10 +25,7 @@ class Player {
       }
   
     show() {
-    stroke(0);
-    strokeWeight(2);
-    fill(139,69,19);
-    ellipse(this.x, this.y, this.r);
+      image(playerimg, this.x, this.y);
     }
 
 

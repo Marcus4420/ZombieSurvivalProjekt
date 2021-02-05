@@ -12,16 +12,16 @@ class TankEnemyBig {
 
     attack() {
         if (player.x > this.x) {
-            this.x++
+            this.x += 0.65
         }
         if (player.y > this.y) {
-            this.y++
+            this.y += 0.65
         }
         if (player.x < this.x) {
-            this.x--
+            this.x -= 0.65
         }
         if (player.y < this.y) {
-            this.y--
+            this.y -= 0.65
         }
       }
   
@@ -44,9 +44,10 @@ class TankEnemyBig {
     }
 }
 
+/*
 class TankEnemySmall {
     constructor(x, y, r) {
-      this.x = x;
+      this.x = Math.random();
       this.y = y;
       this.r = r
     }
@@ -88,3 +89,4 @@ class TankEnemySmall {
 		return this.r;
     }
 }
+*/

@@ -22,7 +22,7 @@ let totalshots = 0;
 
 
 function preload() {
-    playerimg = loadImage('Cowboy_Player.png');
+    playerimg = loadImage('Cowboy_Player_up.png');
     musik = createAudio('Baptism.mp3');
   }
 
