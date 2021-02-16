@@ -1,7 +1,7 @@
 class Skud{
 	constructor(xSpd, ySpd){
-		this.x = player.x+25;
-		this.y = player.y;
+		this.x = player.x + player.r/2;
+		this.y = player.y + player.r/2;
 		this.xSpd = 12*xSpd;
 		this.ySpd = 12*ySpd;
 		this.randX = Math.floor(Math.random(150))

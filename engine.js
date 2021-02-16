@@ -22,11 +22,6 @@ function scoreboard() {
 }
 
 
-function spawnmessage() {
-	fill(255);
-	text("BRUG PILETASTERNE TIL AT BEVÆGE DIG \n SKYD NÅR DU SER EN FJENDE", width/2 + player.r, height/2);
-}
-
 function spawning() {
 targetTimer += 1 * (score + 1);;
 if (targetTimer > 500){

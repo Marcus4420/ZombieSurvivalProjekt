@@ -12,25 +12,29 @@ class Enemy {
   }
 
   attack() {
-        if (player.x > this.x) {
+        if (player.x > this.x ) {
+            zombieimg = loadImage('zombie_right.png')
             this.x++
         }
-        if (player.y > this.y) {
+        if (player.y > this.y ) {
+            zombieimg = loadImage('zombie_down.png')
             this.y++
         }
-        if (player.x < this.x) {
+        if (player.x < this.x ) {
+            zombieimg = loadImage('zombie_left.png')
             this.x--
         }
-        if (player.y < this.y) {
+        if (player.y < this.y ) {
+            zombieimg = loadImage('zombie_up.png')
             this.y--
+        }
+        else {
+          zombieimg = loadImage('zombie_idle.png')
         }
       }
   
     show() {
-    stroke(0);
-    strokeWeight(2);
-    fill(255,0,0);
-    ellipse(this.x, this.y, this.r);
+      image(zombieimg, this.x, this.y);
     }
     myX(){
 		return this.x;

@@ -7,22 +7,38 @@ class Player {
   
     move() {
         if (keyIsDown(LEFT_ARROW)) {
+          if (direction != 'LEFT') {
             playerimg = loadImage('Cowboy_Player_Left.png');
+            direction = "LEFT"
+            console.log("changed to " + direction)
+          }
             this.x -= 4
           }
         
-          if (keyIsDown(RIGHT_ARROW)) {
-            playerimg = loadImage('Cowboy_Player_Right.png');
+          else if (keyIsDown(RIGHT_ARROW)) {
+            if (direction != 'RIGHT') {
+              playerimg = loadImage('Cowboy_Player_Right.png');
+              direction = "RIGHT"
+              console.log("changed to " + direction)
+            }
             this.x += 4;
           }
         
-          if (keyIsDown(UP_ARROW)) {
-            playerimg = loadImage('Cowboy_Player_Up.png');
+          else if (keyIsDown(UP_ARROW)) {
+            if (direction != 'UP') {
+              playerimg = loadImage('Cowboy_Player_Up.png');
+              direction = "UP"
+              console.log("changed to " + direction)
+            }
             this.y -= 4;
           }
         
-          if (keyIsDown(DOWN_ARROW)) {
-            playerimg = loadImage('Cowboy_Player_Down.png');
+          else if (keyIsDown(DOWN_ARROW)) {
+            if (direction != 'DOWN') {
+              playerimg = loadImage('Cowboy_Player_Down.png');
+              direction = "DOWN"
+              console.log("changed to " + direction)
+            }
             this.y += 4;
           }
       }

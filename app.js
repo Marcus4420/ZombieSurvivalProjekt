@@ -15,14 +15,17 @@ let musik
 /* Baggrundsbillede load in*/
 let background_image;
 let playerimg;
+let zombieimg;
 let playing = 0;
 let acc = 0;
 let shotshit = 0;
 let totalshots = 0;
+let direction = 'UP';
 
 
 function preload() {
     playerimg = loadImage('Cowboy_Player_up.png');
+    zombieimg = loadImage('zombie_down.png')
     musik = createAudio('Baptism.mp3');
   }
 
@@ -40,9 +43,6 @@ function setup() {
 function draw() {
     /* Midlertidig baggrundsfarve. Erstat RGB med background_image når et ordentligt er valgt*/
     background(155,118,83);
-    if (totalshots < 1) {
-      spawnmessage();
-    }
     /* Scoreboard funktionen med score + aktive fjender. Se engine.js*/
     scoreboard();
     /* Enemy spawning function. Se ligeledes engine.js*/
