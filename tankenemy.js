@@ -1,8 +1,10 @@
 class TankEnemyBig {
-    constructor(x, y, r) {
-      this.x = x;
-      this.y = y;
-      this.r = r
+    constructor(x, y, r, img, ad) {
+    this.AD = ad
+    this.img = img;
+    this.x = x;
+    this.y = y;
+    this.r = r;
     }
 
 
@@ -11,71 +13,38 @@ class TankEnemyBig {
     }
 
     attack() {
-        if (player.x > this.x) {
-            this.x += 0.65
-        }
-        if (player.y > this.y) {
-            this.y += 0.65
-        }
-        if (player.x < this.x) {
-            this.x -= 0.65
-        }
-        if (player.y < this.y) {
-            this.y -= 0.65
-        }
-      }
-  
-    show() {
-    stroke(0);
-    strokeWeight(2);
-    fill(51, 0, 138);
-    ellipse(this.x, this.y, this.r);
-    }
-    myX(){
-		return this.x;
-	}
-	
-	myY(){
-		return this.y;
-	}
-	
-	myR(){
-		return this.r;
-    }
-}
-
-/*
-class TankEnemySmall {
-    constructor(x, y, r) {
-      this.x = Math.random();
-      this.y = y;
-      this.r = r
-    }
-  
-    isTank() {
-        return false;
-    }
-
-    attack() {
-        if (player.x > this.x) {
+        if (player.x > this.x && (player.x - this.x) > 1) {
+          if (this.AD != 'RIGHT') {
+            this.img = loadImage('tank_right.png');
+            this.AD = 'RIGHT'
+          }
             this.x++
         }
-        if (player.y > this.y) {
+        if (player.y > this.y && (player.y - this.y) > 1) {
+          if (this.AD != 'DOWN') {
+            this.img = loadImage('tank_down.png');
+            this.AD = 'DOWN'
+          }
             this.y++
-        }
-        if (player.x < this.x) {
+      }
+        if (player.x < this.x && (player.x - this.x) < -1) {
+          if (this.AD != 'LEFT') {
+            this.img = loadImage('tank_left.png');
+            this.AD = 'LEFT'
+          }
             this.x--
-        }
-        if (player.y < this.y) {
+      }
+        if (player.y < this.y && (player.y - this.y) < -1) {
+          if (this.AD != 'UP') {
+            this.img = loadImage('tank_up.png');
+            this.AD = 'UP'
+          }
             this.y--
         }
       }
   
-    show() {
-    stroke(0);
-    strokeWeight(2);
-    fill(51, 0, 77);
-    ellipse(this.x, this.y, this.r);
+      show() {
+        image(this.img, this.x, this.y);
     }
     myX(){
 		return this.x;
@@ -89,4 +58,3 @@ class TankEnemySmall {
 		return this.r;
     }
 }
-*/

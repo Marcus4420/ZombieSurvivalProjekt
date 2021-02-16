@@ -22,12 +22,14 @@ let shotshit = 0;
 let totalshots = 0;
 let direction = 'UP';
 let attackdirection = 'UP';
+let tankimg;
 
 
 function preload() {
     playerimg = loadImage('Cowboy_Player_up.png');
     zombieimg = loadImage('zombie_down.png')
     musik = createAudio('Baptism.mp3');
+    tankimg = loadImage('tank_up.png');
   }
 
 /* Start-up script*/

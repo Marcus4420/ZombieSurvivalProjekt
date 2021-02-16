@@ -30,13 +30,13 @@ let enemy = new Enemy(random(width), random(height), 18, zombieimg, attackdirect
 enemies.push(enemy)
 console.log("Enemy spawned")
 console.log("Current enemies: " + enemies.length)
-/* let BigSpawn = Math.floor(Math.random() * 2)
+let BigSpawn = Math.floor(Math.random() * 5)
 console.log(BigSpawn)
 if (BigSpawn === 1) {
-	let BigTank = new TankEnemyBig(random(width), random(height), 39);
+	let BigTank = new TankEnemyBig(random(width), random(height), 39, tankimg, attackdirection)
 	enemies.push(BigTank);
 }
-*/
+
 
 }
 }
