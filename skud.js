@@ -29,7 +29,7 @@ class Skud{
 
     hitScan(){
 		for (var i = 0; i < enemies.length; i++){
-			var collideOrNot = collideCircleCircle(this.x, this.y, 30, enemies[i].myX(), enemies[i].myY(), enemies[i].myR())
+			var collideOrNot = collideCircleCircle(this.x, this.y, 35, enemies[i].myX(), enemies[i].myY(), enemies[i].myR())
 			if (collideOrNot){
 				if (enemies[i].isTank()){
 					if (enemies[i].r > 13) {

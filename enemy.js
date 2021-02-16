@@ -1,5 +1,7 @@
 class Enemy {
-    constructor(x, y, r) {
+    constructor(x, y, r,img, ad) {
+      this.img = img
+      this.AD
       this.x = x;
       this.y = y;
       this.r = r
@@ -12,29 +14,38 @@ class Enemy {
   }
 
   attack() {
-        if (player.x > this.x ) {
-            zombieimg = loadImage('zombie_right.png')
+        if (player.x > this.x && (player.x - this.x) > 1) {
+          if (this.AD != 'RIGHT') {
+            this.img = loadImage('zombie_right.png');
+            this.AD = 'RIGHT'
+          }
             this.x++
         }
-        if (player.y > this.y ) {
-            zombieimg = loadImage('zombie_down.png')
+        if (player.y > this.y && (player.y - this.y) > 1) {
+          if (this.AD != 'DOWN') {
+            this.img = loadImage('zombie_down.png');
+            this.AD = 'DOWN'
+          }
             this.y++
-        }
-        if (player.x < this.x ) {
-            zombieimg = loadImage('zombie_left.png')
+      }
+        if (player.x < this.x && (player.x - this.x) < -1) {
+          if (this.AD != 'LEFT') {
+            this.img = loadImage('zombie_left.png');
+            this.AD = 'LEFT'
+          }
             this.x--
-        }
-        if (player.y < this.y ) {
-            zombieimg = loadImage('zombie_up.png')
+      }
+        if (player.y < this.y && (player.y - this.y) < -1) {
+          if (this.AD != 'UP') {
+            this.img = loadImage('zombie_up.png');
+            this.AD = 'UP'
+          }
             this.y--
         }
-        else {
-          zombieimg = loadImage('zombie_idle.png')
-        }
       }
-  
+
     show() {
-      image(zombieimg, this.x, this.y);
+      image(this.img, this.x, this.y);
     }
     myX(){
 		return this.x;

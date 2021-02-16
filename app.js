@@ -21,6 +21,7 @@ let acc = 0;
 let shotshit = 0;
 let totalshots = 0;
 let direction = 'UP';
+let attackdirection = 'UP';
 
 
 function preload() {
