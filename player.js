@@ -7,19 +7,22 @@ class Player {
   
     move() {
         if (keyIsDown(LEFT_ARROW)) {
-            playerimg.rotate(270);
+            playerimg = loadImage('Cowboy_Player_Left.png');
             this.x -= 4
           }
         
           if (keyIsDown(RIGHT_ARROW)) {
+            playerimg = loadImage('Cowboy_Player_Right.png');
             this.x += 4;
           }
         
           if (keyIsDown(UP_ARROW)) {
+            playerimg = loadImage('Cowboy_Player_Up.png');
             this.y -= 4;
           }
         
           if (keyIsDown(DOWN_ARROW)) {
+            playerimg = loadImage('Cowboy_Player_Down.png');
             this.y += 4;
           }
       }
